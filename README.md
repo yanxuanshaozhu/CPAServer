@@ -21,7 +21,7 @@ This server made using Express and it can interact with your app through HTTPReq
 
 ## Usage
 
-1. Download this server, run npm install
-2. Rename the configure_demo.js file to configure.js, and modify the serverURL to your own mongodb database
-3. Run npm start or nodemon, then the server runs at localhost:3000
+1. Download this server, run `npm install`
+2. Rename the `configure_demo.js` file to `configure.js`, and modify the serverURL to your own mongodb database
+3. Run `npm start` or `nodemon`, then the server runs at localhost:3000
 4. You can also deploy the server to heroku with heroku cli
