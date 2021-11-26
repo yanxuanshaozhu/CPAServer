@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+
+  <h2>Server description</h2>
+
+  <p>This server made using Express and it can interact with your app through HTTPRequests and execute CRUD with MongoDB</p>
+  
+  <h2>HTTPRequest</h2>
+  
+  <ol>
+    <li> Make post request to "/register" to make registration
+      <ul>
+        <li>Response status is true if registration is successful</li>
+        <li>Response status is false if the the account already exists</li>
+      </ul>
+    </li>
+
+    <li> Make post request to "/getUserInfo" to get user information
+      <ul>
+        <li>Response status is true if user exists, user info is also contained in the response</li>
+        <li>Response status is false if user does not exist</li>
+      </ul>
+    </li>
+
+    <li> Make post request to "/setUserActivity" to record user activity
+      <ul>
+        <li>Response status is insert if there is no activity associated with the user</li>
+        <li>Response status is update if there are activities associated with the user</li>
+      </ul>
+    </li>
+
+    <li> Make post request to "/getUserActivity" to get user activity history
+      <ul>
+        <li>Response status is true if user exists, user activity history is also contained in the response</li>
+        <li>Response status if false if user does not exist</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2>Usage</h2>
+
+  <ol>
+    <li>Download this server, run npm install</li>
+    <li>Rename the configure_demo.js file to configure.js, and modify the serverURL to your own mongodb database</li>
+    <li>Run npm start or nodemon, then the server runs at localhost:3000</li>
+    <li>You can also deploy the server to heroku with heroku cli</li>
+  </ol>
+
+
+</body>
+
+</html>
