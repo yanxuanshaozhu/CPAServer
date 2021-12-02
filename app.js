@@ -12,7 +12,6 @@ mongoose.connect(mongodbURL);
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
-
 const User = require("./models/User.js");
 const Activity = require("./models/UserActivity.js");
 
@@ -159,7 +158,6 @@ app.post("/setUserActivity",
       } else {
         userRecord["currency"] = []
       }
-
       let record = new Activity(userRecord);
       await record.save();
       res.json({ "status": "insert" });
@@ -188,7 +186,6 @@ app.post("/setUserActivity",
       if (currency != null) {
         currencyNew = [...record.currency, currency]
       }
-
       await Activity.updateOne({ "userEmail": userEmail }, { $set: { "area": areaNew, "length": lengthNew, "speed": speedNew, "volume": volumeNew, "weight": weightNew, "currency": currencyNew } });
       res.json({ "status": "update" })
     }
@@ -199,7 +196,6 @@ app.post("/getUserActivity",
   async (req, res, next) => {
     try {
       let userEmail = req.body.userEmail;
-
       const existed = await Activity.find({ userEmail: userEmail });
       if (existed.length === 0) {
         res.json({ status: false });
