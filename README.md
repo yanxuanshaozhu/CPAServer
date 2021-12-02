@@ -12,10 +12,14 @@ This server made using Express and it can interact with your app through HTTPReq
 2. Make post request to "/getUserInfo" to get user information
    - Response status is true if user exists, user info is also contained in the response
    - Response status is false if user does not exist
-3. Make post request to "/setUserActivity" to record user activity
+3. Make post request to "/updateUserInfo" to update user information
+   - Response status is -2 if current email is not linked to any existing account
+   - Response status is -1 if target email has already been linked to another account
+   - Response status is 0 if update is successful
+4. Make post request to "/setUserActivity" to record user activity
    - Response status is insert if there is no activity associated with the user
    - Response status is update if there are activities associated with the user
-4. Make post request to "/getUserActivity" to get user activity history
+5. Make post request to "/getUserActivity" to get user activity history
    - Response status is true if user exists, user activity history is also contained in the response
    - Response status if false if user does not exist
 
