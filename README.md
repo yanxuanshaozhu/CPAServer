@@ -2,7 +2,7 @@
 
 ## Server description
 
-This server made using Express and it can interact with your app through HTTPRequests and execute CRUD with MongoDB
+This server is made using Express and it is used to interact with my <a href="https://github.com/yanxuanshaozhu/Mobile-Development/tree/CAP5" >React Native app </a> and with MongoDB Atlas database for that app. This server has already been deployed to Heroku. 
 
 ## HTTPRequest
 
